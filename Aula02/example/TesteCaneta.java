@@ -1,4 +1,4 @@
-package Aula02;
+package Aula02.example;
 
 public class TesteCaneta{
     public static void main(String[] args){
