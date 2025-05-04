@@ -1,4 +1,4 @@
-package Aula02.exercise_1;
+package Aula_02.exercise_1;
 
 public class Computador {
     String marca;
