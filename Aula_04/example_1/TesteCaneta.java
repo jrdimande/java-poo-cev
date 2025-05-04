@@ -2,7 +2,7 @@ package Aula_04.example_1;
 
 public class TesteCaneta {
     public static void main(String[] args){
-        Caneta c1 = new Caneta();
+        Caneta c1 = new Caneta("Samsung", 0.2f);
 
         // Usando os metodos especiais
         c1.setModelo("Bic");

@@ -4,6 +4,13 @@ public class Caneta {
     public String modelo;
     private float ponta;
 
+    // metodo constructor
+    public  Caneta(String modelo, float ponta){
+        this.modelo = modelo;
+        this.ponta = ponta;
+    }
+    public Caneta(){}
+
     public String getModelo(){
         return this.modelo;
     }
