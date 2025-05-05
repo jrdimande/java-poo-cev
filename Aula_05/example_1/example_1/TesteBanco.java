@@ -1,4 +1,4 @@
-package Aula_05.example_1;
+package Aula_05.example_1.example_1;
 
 public class TesteBanco {
     public static void main(String[] args){
