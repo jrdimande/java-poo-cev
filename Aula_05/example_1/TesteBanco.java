@@ -1,10 +1,10 @@
-package Aula_05.example_1.example_1;
+package Aula_05.example_1;
 
 public class TesteBanco {
     public static void main(String[] args){
 
         // Jubileu
-        ContaBanco cb1 = new ContaBanco();
+        ContaBanco cb1 = new Aula_05.example_1.example_1.ContaBanco();
         cb1.setNumeroConta(1928344);
         cb1.setTitular("Jubileu");
         cb1.abrirConta("cc");

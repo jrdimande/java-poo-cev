@@ -41,28 +41,33 @@ public class Mpesa {
     }
 
     // Metodos especificos
+
+    // Metodo para criar conta
     public void criarConta(String nome, int numero){
         setNome(nome);
         setNumero(numero);
         setStatus(true);
+        System.out.println("Conta criada com sucesso");
+        getInfo();
 
     }
 
+    // Metodo para desativar conta
     public void desativarConta(){
         if (getSaldo() == 0){
             setStatus(false);
         }else {
-            System.out.println("Saldo maior que zero(0)");
+            System.out.println("Nao pode desativar a conta, saldo > 0");
         }
 
     }
 
-
+    // Metodo para deposito
      public void depositar(double valor){
         if (this.getStatus() == true){
             if (valor > 0){
                 setSaldo(this.saldo += valor);
-                System.out.println("Valor depositado com sucesso");
+                System.out.println("Valor depositado com sucesso: +"+valor + "MZN");
             }else {
                 System.out.println("Valor invalido! tente novamente");
             }
@@ -72,6 +77,7 @@ public class Mpesa {
 
      }
 
+     // Metodo para levantamento
      public void levantar(double valor){
          if (this.getStatus() == true){
              if (valor > 0){
@@ -84,6 +90,27 @@ public class Mpesa {
          }
 
      }
+
+     // Metodo para transferir dinheiro
+     public void transferir(Mpesa conta, double valor){
+        if (getSaldo() >= valor && valor > 0 && conta.getStatus() == true){
+            this.setSaldo(this.getSaldo() - valor);
+            conta.setSaldo(conta.getSaldo() + valor);
+        }else {
+            System.out.println("Ocorreu um erro! tente novamente!");
+        }
+
+     }
+
+     // Metodo para exibir informacoes da conta
+     public void getInfo(){
+         System.out.println("------------------------------------------------------------------");
+         System.out.println("Nome: " + getNome());
+         System.out.println("Numero: " +  getNumero());
+         System.out.println("Saldo: " + getSaldo());
+     }
+
+
 
 
 
