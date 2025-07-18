@@ -27,7 +27,7 @@ public class PagamentoMpesa implements Pagamento{
 
     @Override
     public void ralizarPagamento(double valor) {
-        System.out.println("Pagamento  de %.2f MZN efectuado via Mpesa", valor);
+        System.out.printf("Pagamento  de %.2f MZN efectuado via Mpesa", valor);
 
     }
 }
