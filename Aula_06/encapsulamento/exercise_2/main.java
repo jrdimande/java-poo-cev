@@ -6,5 +6,8 @@ public class main {
 
         usuario = new UsuarioAdmin("ian", "Admin");
         usuario.login("ian", "1234");
+
+        usuario.logout();
+
     }
 }
